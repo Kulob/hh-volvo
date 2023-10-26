@@ -2,8 +2,10 @@ import { Button } from '@mui/material'
 import React from 'react'
 import './gr_code.scss'
 import QrImg from '../../assets/qr-code.jpg'
+import { useNavigate } from 'react-router-dom'
 
 const QrCode = () => {
+  const navigate = useNavigate()
   return (
     <div className='gr'>
         <div className="gr_info">
@@ -12,7 +14,7 @@ const QrCode = () => {
         </div>
         <img src={QrImg} alt="" />
         <p>Сканируйте QR-код или нажмите ОК</p>
-        <Button sx={{background:'#000', color:'#fff', marginBottom: '10px', width:'156px', height:'52px'}}>Ok</Button>
+        <Button onClick={() => navigate('/contact')} sx={{background:'#000', color:'#fff', marginBottom: '10px', width:'156px', height:'52px'}}>Ok</Button>
     </div>
   )
 }
