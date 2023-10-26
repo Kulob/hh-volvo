@@ -1,0 +1,5 @@
+declare module '@mui/material/styles'
+declare module '*.svg'
+declare module '*.jpg';
+declare module '*.jpeg';
+declare module '*.mp4';
